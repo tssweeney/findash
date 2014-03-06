@@ -1,0 +1,1 @@
+This is a Financial Dashbaord written in Javascript, built on Meteor, and therefore Node. This is written for a class project and should be used for educational purposes only.
