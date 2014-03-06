@@ -1,0 +1,66 @@
+<template name="stockTable">
+  <div class="span12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Symbol</th>
+          <th>Name</th>
+          <th>Recent Value</th>
+          <th>Recent Date</th>
+          <th>Number Owned</th>
+          <th>Price</th>
+          <th>Date Purchased</th>
+          <th>Net Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each stocks}}
+        <tr class="stockRow">
+          <td>{{symbol}}</td>
+          <td>{{name}}</td>
+          <td>{{convertCurrency latestValues.close}}</td>
+          <td>{{convertDate latestValues.date}}</td> 
+          {{#if ownedStocks}}
+          <td>{{ownedStocks.quantity}}</td>
+          <td>{{convertCurrency ownedStocks.fullPrice}}</td>
+          <td>{{convertDate ownedStocks.datePurchased}}</td>
+          <td>{{convertCurrency netValue}}</td>
+          {{else}}
+          <td colspan="4">No Stocks Purchased</td>
+          {{/if}}
+        </tr>
+        <tr style="display:none;" id="{{symbol}}_history">
+          <td colspan="8">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>Date</td>
+                  <td>Open</td>
+                  <td>Close</td>
+                  <td>Volume</td>
+                  <td>AdjClose</td>
+                  <td>High</td>
+                  <td>Low</td>
+                </tr>
+              </thead>
+              <tbody>
+                {{#each sortDate historicalData}}
+                <tr>
+                  <td>{{convertDate date}}</td>
+                  <td>{{convertCurrency open}}</td>
+                  <td>{{convertCurrency close}}</td>
+                  <td>{{volume}}</td>
+                  <td>{{convertCurrency adjClose}}</td>
+                  <td>{{convertCurrency high}}</td>
+                  <td>{{convertCurrency low}}</td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</template>

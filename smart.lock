@@ -1,0 +1,53 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "collection2": {},
+      "collection-hooks": {},
+      "collection-helpers": {},
+      "houston": {}
+    },
+    "packages": {
+      "collection2": {
+        "git": "https://github.com/aldeed/meteor-collection2.git",
+        "tag": "v0.3.8",
+        "commit": "69aff2a21ba3c382f915e1f9dbcca2ad38edb6d5"
+      },
+      "collection-hooks": {
+        "git": "https://github.com/matb33/meteor-collection-hooks.git",
+        "tag": "v0.6.2",
+        "commit": "29484b2110206be93b01c6d11ce06ec9208de7bd"
+      },
+      "collection-helpers": {
+        "git": "https://github.com/dburles/meteor-collection-helpers.git",
+        "tag": "v0.2.3",
+        "commit": "52c4c692421acea557fb329f43f65ed11b4832df"
+      },
+      "houston": {
+        "git": "https://github.com/gterrono/houston.git",
+        "tag": "v1.0.1",
+        "commit": "59653d3a345a438c83bfd5244b992a19c4b014d7"
+      },
+      "simple-schema": {
+        "git": "https://github.com/aldeed/meteor-simple-schema.git",
+        "tag": "v0.2.40",
+        "commit": "d22892daa943e3567916effeaafd794ca6af5cd2"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.1.2",
+        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
+      },
+      "spin": {
+        "git": "https://github.com/SachaG/meteor-spin.git",
+        "tag": "v0.2.2",
+        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.6.4",
+        "commit": "927bbaed1b87894fb6fb70807f74ff3a5bd89f29"
+      }
+    }
+  }
+}
